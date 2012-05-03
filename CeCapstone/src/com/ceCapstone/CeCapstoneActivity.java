@@ -11,5 +11,5 @@ public class CeCapstoneActivity extends Activity {
         setContentView(R.layout.main);
     }
     
-    //test back to local copy
+    //test back to local
 }
