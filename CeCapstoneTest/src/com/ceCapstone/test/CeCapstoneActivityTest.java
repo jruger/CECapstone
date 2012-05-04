@@ -1,6 +1,6 @@
 package com.ceCapstone.test;
 
-import com.ceCapstone.CeCapstoneActivity;
+import com.ceCapstone.CeCapstoneGoogleMapsActivity;
 
 import android.test.*;
 import org.junit.*;
