@@ -20,7 +20,7 @@ public class CeCapstoneGoogleMapsOverlay extends ItemizedOverlay {
 	
 	public CeCapstoneGoogleMapsOverlay(Drawable defaultMarker, Context context) {
 		super(boundCenterBottom(defaultMarker));
-		mContext = context;
+		mContext = context ;
 	}
 
 	@Override
