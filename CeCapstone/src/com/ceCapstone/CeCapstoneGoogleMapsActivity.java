@@ -25,6 +25,7 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 	private MapController controller;
 	private String LogCatTag = "Rugers";
 	private MyLocationListener mlocListener;
+	private LocationManager mlocManager;
 
 	// Required by google maps must be overridden
 	@Override
@@ -44,6 +45,7 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 
 	@Override
 	public void onSaveInstanceState(Bundle savedInstanceState) {
+		Log.i(LogCatTag, "saved bundle");
 		mapView.setSaveEnabled(true);
 		super.onSaveInstanceState(savedInstanceState);
 
@@ -51,35 +53,41 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 
 	protected void onStart() {
 		super.onStart();
+		Log.i(LogCatTag, "onRestart");
 		// initializeMyLocation();
 	}
 
 	protected void onRestart() {
+		Log.i(LogCatTag, "onRestart");
 		super.onRestart();
 	}
 
 	protected void onResume() {
+		Log.i(LogCatTag, "onResume");
 		super.onResume();
-		/*
-		 * initializeMap(); controller = mapView.getController();
-		 * Log.i(LogCatTag, "In Resume"); if(controller == null){
-		 * Log.e(LogCatTag, "Controller is null"); }else{
-		 * controller.setZoom(17);
-		 * controller.animateTo(myLocOverlay.getMyLocation()); }
-		 */
-
+		mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
+				mlocListener);
+		myLocOverlay.enableMyLocation();
 	}
 
 	protected void onPause() {
 		super.onPause();
+		Log.i(LogCatTag, "onPause");
+		mlocManager.removeUpdates(mlocListener);
+		myLocOverlay.disableMyLocation();
 	}
 
 	protected void onStop() {
+		Log.i(LogCatTag, "onStop");
 		super.onStop();
 	}
 
 	protected void onDestroy() {
 		super.onDestroy();
+		Log.i(LogCatTag, "onDestroy");
+		mlocManager.removeUpdates(mlocListener);
+		myLocOverlay.disableMyLocation();
+
 	}
 
 	private void initializeMap() {
@@ -104,11 +112,11 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 	}
 
 	private void initializeLocationManager() {
-		LocationManager mlocManager =
+		mlocManager =
 
 		(LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-		LocationListener mlocListener = new MyLocationListener(this, controller);
+		mlocListener = new MyLocationListener(this, controller);
 
 		mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
 				mlocListener);
