@@ -3,5 +3,9 @@
 
     <string name="hello">Hello World, CeCapstoneActivity!</string>
     <string name="app_name">CeCapstone</string>
+    <string name="depth">Depth</string>
+    <string name="camera">Camera</string>
+    <string name="mapview">MapView</string>
+    <string name="back">Back</string>
 
 </resources>

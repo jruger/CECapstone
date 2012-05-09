@@ -82,7 +82,7 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 		super.onStop();
 	}
 
-	protected void onDestroy() {
+	protected void onDestroy() { 
 		super.onDestroy();
 		Log.i(LogCatTag, "onDestroy");
 		mlocManager.removeUpdates(mlocListener);

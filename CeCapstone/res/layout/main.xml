@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mapview"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerlayout"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:apiKey="05ZOGCx7T2PagXeYyg12SArYuUF_c3hbhIEpcSA"
-    android:clickable="true" />
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true" >
+
+    <com.google.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerlayout"
+        android:apiKey="05ZOGCx7T2PagXeYyg12SArYuUF_c3hbhIEpcSA"
+        android:clickable="true" 
+    />
+    
+    <Button
+        android:id="@+id/amap_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/back" >
+    </Button>
+    <Button
+        android:id="@+id/amap_depth_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/amap_back_btn"
+        android:layout_alignParentTop="true"
+        android:text="@string/depth" >
+    </Button>
+    <Button
+        android:id="@+id/amap_Camera_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/amap_depth_btn"
+        android:layout_alignParentTop="true"
+        android:text="@string/camera" >
+    </Button>
+
+</RelativeLayout>
+
