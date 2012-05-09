@@ -7,5 +7,6 @@
     <string name="camera">Camera</string>
     <string name="mapview">MapView</string>
     <string name="back">Back</string>
+    <string name="title"><b>Autonomous Watercraft with Manual Override</b></string>
 
 </resources>

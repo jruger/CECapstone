@@ -23,7 +23,7 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 	private MapView mapView;
 	private MyLocationOverlay myLocOverlay;
 	private MapController controller;
-	private String LogCatTag = "Rugers";
+	private String MapActivityLogTag = "Rugers Map Activity";
 	private MyLocationListener mlocListener;
 	private LocationManager mlocManager;
 
@@ -40,12 +40,12 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 		initializeMap();
 		initializeMyLocation();
 		initializeLocationManager();
-		Log.i(LogCatTag, "In onCreate");
+		Log.i(MapActivityLogTag, "In onCreate");
 	}
 
 	@Override
 	public void onSaveInstanceState(Bundle savedInstanceState) {
-		Log.i(LogCatTag, "saved bundle");
+		Log.i(MapActivityLogTag, "saved bundle");
 		mapView.setSaveEnabled(true);
 		super.onSaveInstanceState(savedInstanceState);
 
@@ -53,17 +53,17 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 
 	protected void onStart() {
 		super.onStart();
-		Log.i(LogCatTag, "onRestart");
+		Log.i(MapActivityLogTag, "onRestart");
 		// initializeMyLocation();
 	}
 
 	protected void onRestart() {
-		Log.i(LogCatTag, "onRestart");
+		Log.i(MapActivityLogTag, "onRestart");
 		super.onRestart();
 	}
 
 	protected void onResume() {
-		Log.i(LogCatTag, "onResume");
+		Log.i(MapActivityLogTag, "onResume");
 		super.onResume();
 		mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
 				mlocListener);
@@ -72,19 +72,19 @@ public class CeCapstoneGoogleMapsActivity extends MapActivity {
 
 	protected void onPause() {
 		super.onPause();
-		Log.i(LogCatTag, "onPause");
+		Log.i(MapActivityLogTag, "onPause");
 		mlocManager.removeUpdates(mlocListener);
 		myLocOverlay.disableMyLocation();
 	}
 
 	protected void onStop() {
-		Log.i(LogCatTag, "onStop");
+		Log.i(MapActivityLogTag, "onStop");
 		super.onStop();
 	}
 
 	protected void onDestroy() { 
 		super.onDestroy();
-		Log.i(LogCatTag, "onDestroy");
+		Log.i(MapActivityLogTag, "onDestroy");
 		mlocManager.removeUpdates(mlocListener);
 		myLocOverlay.disableMyLocation();
 

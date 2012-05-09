@@ -13,9 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/headerlayout"
         android:apiKey="05ZOGCx7T2PagXeYyg12SArYuUF_c3hbhIEpcSA"
-        android:clickable="true" 
-    />
-    
+        android:clickable="true" />
+
     <Button
         android:id="@+id/amap_back_btn"
         android:layout_width="wrap_content"
@@ -24,22 +23,23 @@
         android:layout_alignParentTop="true"
         android:text="@string/back" >
     </Button>
+
     <Button
         android:id="@+id/amap_depth_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/amap_back_btn"
         android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/amap_back_btn"
         android:text="@string/depth" >
     </Button>
+
     <Button
         android:id="@+id/amap_Camera_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/amap_depth_btn"
         android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/amap_depth_btn"
         android:text="@string/camera" >
     </Button>
 
 </RelativeLayout>
-
