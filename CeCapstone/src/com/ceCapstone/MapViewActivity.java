@@ -11,11 +11,14 @@ import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MapViewActivity extends MapActivity {
 
@@ -40,6 +43,7 @@ public class MapViewActivity extends MapActivity {
 		initializeMap();
 		initializeMyLocation();
 		initializeLocationManager();
+		initbuttons();
 		Log.i(MapActivityLogTag, "In onCreate");
 	}
 
@@ -120,6 +124,29 @@ public class MapViewActivity extends MapActivity {
 
 		mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
 				mlocListener);
+
+	}
+	
+	private void initbuttons() {
+		final Button button = (Button) findViewById(R.id.mapDepth);
+		button.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Log.i(MapActivityLogTag, "depth Button Clicked");
+				Intent intent = new Intent(MapViewActivity.this,
+						DepthChartActivity.class);
+				MapViewActivity.this.startActivity(intent);
+			}
+		});
+		
+		final Button button2 = (Button) findViewById(R.id.mapCamera);
+		button2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Log.i(MapActivityLogTag, "Camera Button Clicked");
+				Intent intent = new Intent(MapViewActivity.this,
+						CameraActivity.class);
+				MapViewActivity.this.startActivity(intent);
+			}
+		});
 
 	}
 

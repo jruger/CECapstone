@@ -35,6 +35,8 @@
             android:windowSoftInputMode="adjustResize" >
 >
         </activity>
+        <activity android:name="DepthChartActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="landscape"></activity>
+        <activity android:name="CameraActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:hardwareAccelerated="true" android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

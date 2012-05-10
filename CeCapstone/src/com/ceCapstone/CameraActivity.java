@@ -1,21 +1,21 @@
 package com.ceCapstone;
 
-import android.app.Activity; 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class WelcomeActivity extends Activity {
+public class CameraActivity extends Activity{
 
 	private String WelcomeLogTag = "Rugers-Welcome";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.welcome);
-		Log.i(WelcomeLogTag, "In Welcome Activity");
+		setContentView(R.layout.camera);
+		Log.i(WelcomeLogTag, "In Camera Activity");
 		initbuttons();
 	}
 
@@ -51,16 +51,26 @@ public class WelcomeActivity extends Activity {
 	}
 
 	private void initbuttons() {
-		final Button button = (Button) findViewById(R.id.button1);
+		final Button button = (Button) findViewById(R.id.cameraMap);
 		button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				Log.i(WelcomeLogTag, "MapView Button Clicked");
-				Intent intent = new Intent(WelcomeActivity.this,
+				Intent intent = new Intent(CameraActivity.this,
 						MapViewActivity.class);
-				WelcomeActivity.this.startActivity(intent);
+				CameraActivity.this.startActivity(intent);
+			}
+		});
+		
+		final Button button2 = (Button) findViewById(R.id.cameraDepth);
+		button2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Log.i(WelcomeLogTag, "Camera Button Clicked");
+				Intent intent = new Intent(CameraActivity.this,
+						DepthChartActivity.class);
+				CameraActivity.this.startActivity(intent);
 			}
 		});
 
 	}
-
+	
 }

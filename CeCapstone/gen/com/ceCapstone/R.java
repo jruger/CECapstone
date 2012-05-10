@@ -15,18 +15,23 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int amap_Camera_btn=0x7f050004;
-        public static final int amap_back_btn=0x7f050002;
-        public static final int amap_depth_btn=0x7f050003;
-        public static final int button1=0x7f050007;
+        public static final int button1=0x7f05000a;
+        public static final int cameraDepth=0x7f050001;
+        public static final int cameraMap=0x7f050002;
+        public static final int depthCamera=0x7f050003;
+        public static final int depthMap=0x7f050004;
         public static final int headerlayout=0x7f050000;
-        public static final int mapview=0x7f050001;
-        public static final int textView1=0x7f050006;
-        public static final int title=0x7f050005;
+        public static final int mapCamera=0x7f050007;
+        public static final int mapDepth=0x7f050006;
+        public static final int mapview=0x7f050005;
+        public static final int textView1=0x7f050009;
+        public static final int title=0x7f050008;
     }
     public static final class layout {
-        public static final int mapview=0x7f030000;
-        public static final int welcome=0x7f030001;
+        public static final int camera=0x7f030000;
+        public static final int depth=0x7f030001;
+        public static final int mapview=0x7f030002;
+        public static final int welcome=0x7f030003;
     }
     public static final class string {
         public static final int app_name=0x7f040001;

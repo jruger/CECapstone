@@ -6,17 +6,8 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true" >
 
-    <com.google.android.maps.MapView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/mapview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/headerlayout"
-        android:apiKey="05ZOGCx7T2PagXeYyg12SArYuUF_c3hbhIEpcSA"
-        android:clickable="true" />
-
     <Button
-        android:id="@+id/mapDepth"
+        android:id="@+id/cameraDepth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -24,12 +15,12 @@
     </Button>
 
     <Button
-        android:id="@+id/mapCamera"
+        android:id="@+id/cameraMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/mapDepth"
-        android:text="@string/camera" >
+        android:layout_toRightOf="@+id/cameraDepth"
+        android:text="@string/mapview" >
     </Button>
 
 </RelativeLayout>
