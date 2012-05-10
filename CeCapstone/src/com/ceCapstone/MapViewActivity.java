@@ -17,7 +17,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 
-public class CeCapstoneGoogleMapsActivity extends MapActivity {
+public class MapViewActivity extends MapActivity {
 
 	// globals
 	private MapView mapView;

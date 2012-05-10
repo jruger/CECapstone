@@ -13,12 +13,12 @@ import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 
-public class CeCapstoneGoogleMapsOverlay extends ItemizedOverlay {
+public class LocationOverlays extends ItemizedOverlay {
 
 	private ArrayList<OverlayItem> mOverlays = new ArrayList<OverlayItem>();
 	private Context mContext;
 	
-	public CeCapstoneGoogleMapsOverlay(Drawable defaultMarker, Context context) {
+	public LocationOverlays(Drawable defaultMarker, Context context) {
 		super(boundCenterBottom(defaultMarker));
 		mContext = context ;
 	}

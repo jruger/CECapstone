@@ -51,7 +51,7 @@ public class WelcomeActivity extends Activity {
 	private void startTheMap() {
 		Log.i(WelcomeLogTag, "In Start the Map");
 		Intent intent = new Intent(WelcomeActivity.this,
-				CeCapstoneGoogleMapsActivity.class);
+				MapViewActivity.class);
 		WelcomeActivity.this.startActivity(intent);
 	}
 
